@@ -19,6 +19,14 @@ export const StyledHeader = styled.header`
   padding-inline: 42px;
 `;
 
+export const StyledBlockLogo = styled.span`
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+`;
+
 export const StyledLogo = styled.span`
   font-family: Tactic Sans;
   font-size: 32px;
@@ -29,6 +37,49 @@ export const StyledLogo = styled.span`
   @media (max-width: 1040px) {
     font-size: 24px;
   }
+`;
+
+export const StyledDropdownWrapper = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+`;
+
+export const StyledDropdown = styled.select`
+  max-width: 200px;
+  appearance: none;
+  border: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  padding: 16px;
+  padding-right: 40px;
+  border-radius: 4px;
+  background-color: ${Colors.COMMAND_LINE};
+  color: ${Colors.DROPDOWN_TEXT};
+  cursor: pointer;
+  margin-left: 16px;
+
+  &:focus {
+    outline: none;
+  }
+`;
+
+export const StyledOption = styled.option`
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+  color: ${Colors.DROPDOWN_TEXT};
+`;
+
+export const StyledDropdownArrow = styled.img<{isOpen: boolean}>`
+  position: absolute;
+  right: 16px;
+  pointer-events: none;
+  transition: transform 0.3s ease;
+  transform: ${({isOpen}) => (isOpen ? 'rotate(180deg)' : 'rotate(0)')};
 `;
 
 export const StyledBlockUpdate = styled.div`

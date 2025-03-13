@@ -1,7 +1,16 @@
 export type MatchStatus = 'Scheduled' | 'Ongoing' | 'Finished';
 
+export interface Player {
+  username: string;
+  kills: number;
+}
+
 export interface TeamProps {
   name: string;
+  players: Player[];
+  points: number;
+  place: number;
+  total_kills: number;
 }
 
 export interface MatchProps {

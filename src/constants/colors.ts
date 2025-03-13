@@ -9,4 +9,6 @@ export enum Colors {
   LIVE = '#43AD28',
   MATCH_PREPARING = '#EB6402',
   ERROR_BACKGROUND = '#0F1318',
+  DROPDOWN_TEXT = '#B4B5B6',
+  MATCH_DETAILS = '#101318',
 }
